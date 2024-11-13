@@ -1,4 +1,5 @@
 #include "Grafo.h"
+#include "GrafoPeso.h"
 #include <string>
 
 int main() {
@@ -37,5 +38,12 @@ int main() {
 
     grafoNumeros.mostrarGrafo();
 
-    
+    std::cout<<"Ahora para grafo con el peso: "<<std::endl;
+    GrafoPeso<int> grafoPeso;
+
+    grafoPeso.agregarArista(1, 2, 1);    
+    grafoPeso.agregarArista(1, 3, 2);
+    grafoPeso.agregarArista(2, 4, 2);    
+    grafoPeso.agregarArista(3, 8, 5);
+    grafoPeso.mostrarGrafoPeso();   
 }
